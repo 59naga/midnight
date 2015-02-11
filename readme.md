@@ -1,4 +1,4 @@
-# nw-midnight [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Dependency Status][depstat-image]][depstat]
+# nw-midnight [![Build Status][travis-image]][travis] [![Dependency Status][depstat-image]][depstat]
 ![](readme.png)
 is Screen server by [NW.js](https://github.com/nwjs/nw.js)
 
@@ -16,8 +16,6 @@ $ npm test
 # License
 MIT @59naga
 
-[npm-image]: https://badge.fury.io/js/midnight.svg
-[npm]: https://npmjs.org/package/midnight
 [travis-image]: https://travis-ci.org/59naga/midnight.svg?branch=master
 [travis]: https://travis-ci.org/59naga/midnight
 [depstat-image]: https://gemnasium.com/59naga/midnight.svg
