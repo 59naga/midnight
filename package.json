@@ -1,0 +1,47 @@
+{
+  "name": "midnight",
+  "main": "midnight.html",
+  "description": "is screen saver by NW.js",
+  "version": "0.0.1",
+  "window": {
+    "show": false,
+    "frame": false,
+    "toolbar": false,
+    "position": null,
+    "transparent": true
+  },
+  "config": {
+    "noiseSize": 5,
+    "noiseVolume": 0.25
+  },
+  "inject-js-start": "node_modules/nw-jasmine/nw-jasmine.js",
+  "scripts": {
+    "test": "nw . -nwj",
+    "prebuild": "rm -rf build",
+    "build": "gulp releases",
+    "postbuild": "rm -rf build/midnight",
+    "build-test": "TRAVIS_TAG=hoge npm run build"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.0"
+  },
+  "devDependencies": {
+    "event-stream": "^3.2.2",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.3",
+    "gulp-zip": "^2.0.2",
+    "node-webkit-builder": "^1.0.8",
+    "nw": "^0.12.0-alpha2",
+    "nw-jasmine": "^0.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59naga/midnight.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/59naga/midnight/issues"
+  },
+  "homepage": "https://github.com/59naga/midnight"
+}
