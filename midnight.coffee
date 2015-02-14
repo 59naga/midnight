@@ -37,8 +37,9 @@ main= ->
 
   window.postMessage 'midnight:initialized','*'
 
-  T= require './lib/timbre.nw.js'
-  T('noise').set('mul',noiseVolume).play()
+  if process.env.TRAVIS isnt 'true'
+    T= require './lib/timbre.nw.js'
+    T('noise').set('mul',noiseVolume).play()
 
   context= document.createElement('canvas').getContext('2d')
   window.requestAnimationFrame -> noise()
