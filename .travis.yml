@@ -5,6 +5,7 @@ script: 'npm test'
 after_success:
   - npm run build
 before_script:
+  # quotation from https://github.com/FWeinb/node-webkit-screenshot/blob/master/.travis.yml#L8
   - export DISPLAY=:99.0; sh -e /etc/init.d/xvfb start +extension RANDR;
   - sudo apt-get -qq update
   - sudo apt-get -y install libx11-6:i386;

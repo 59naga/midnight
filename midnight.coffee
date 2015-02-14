@@ -11,7 +11,7 @@ main= ->
   window= nwgui.window
   document= window.document
 
-  if process.env.TRAVIS is undefined
+  if process.env.TRAVIS isnt 'true'
     nwgui.enterFullscreen()
     nwgui.show()
   nwgui.resizeTo window.screen.width,window.screen.height

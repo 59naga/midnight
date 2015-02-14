@@ -13,7 +13,7 @@ builder= new Builder
 
 gulp.task 'releases',->
   console.log process.env
-  return if process.env.TRAVIS_TAG is undefined
+  return if process.env.TRAVIS_TAG is ''
 
   gulp.start 'zip'
 
