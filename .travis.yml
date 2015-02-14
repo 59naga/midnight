@@ -3,9 +3,9 @@ node_js:
   - 0.12
 before_install:
   - export DISPLAY=:99
-  - sh -e /etc/init.d/xvfb start :99 -ac -screen 0 1024x768x8
+  - sh -e /etc/init.d/xvfb start +extension RANDR -ac -screen 0 1024x768x8
 script:
-  - npm test
+  - sudo npm test
 after_success:
   - npm run build
 
