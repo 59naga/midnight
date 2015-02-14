@@ -11,9 +11,10 @@ main= ->
   window= nwgui.window
   document= window.document
 
-  nwgui.enterFullscreen()
+  if process.env.TRAVIS is undefined
+    nwgui.enterFullscreen()
+    nwgui.show()
   nwgui.resizeTo window.screen.width,window.screen.height
-  nwgui.show()
 
   targetContext= document.createElement('canvas').getContext('2d')
   targetContext.canvas.setAttribute 'class','animated fadeIn'
