@@ -12,6 +12,7 @@ builder= new Builder
   platforms: ['osx32','osx64','win32','win64']
 
 gulp.task 'releases',->
+  console.log process.env
   return if process.env.TRAVIS_TAG is undefined
 
   gulp.start 'zip'
