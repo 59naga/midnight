@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - 0.12
 before_install:
-  - export DISPLAY=:99
-  - sh -e /etc/init.d/xvfb start +extension RANDR -ac -screen 0 1024x768x8
+  - "export DISPLAY=:99.0"
+  - "Xvfb :99.0 -extension RANDR > /dev/null"
 script:
   - npm test
 after_success:
@@ -23,3 +23,7 @@ deploy:
     tags: true
     all_branches: true
   skip_cleanup: true
+
+cache:
+  directories:
+    - node_modules
