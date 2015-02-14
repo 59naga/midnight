@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - 0.12
 before_install:
-  - "sudo xvfb-run --server-args='-screen 0, 1024x768x24' node-webkit-v0.9.2-linux-x64/nw"
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 script:
   - DISPLAY=:99.0 npm test
 after_success:
