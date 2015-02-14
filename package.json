@@ -16,7 +16,7 @@
   },
   "inject-js-start": "node_modules/nw-jasmine/nw-jasmine.js",
   "scripts": {
-    "test": "nw . -nwj --enable-transparent-visuals --disable-gpu",
+    "test": "DISPLAY=:99.0 nw . -nwj --enable-transparent-visuals --disable-gpu --force-cpu-draw",
     "prebuild": "rm -rf build",
     "build": "gulp releases",
     "postbuild": "rm -rf build/midnight",
