@@ -2,13 +2,8 @@ language: node_js
 node_js:
   - 0.12
 before_install:
-  - "wget https://raw.githubusercontent.com/web-animations/web-animations-js/master/.travis-setup.sh"
-  - "chmod 777 ./.travis-setup.sh"
-  - "sudo ./.travis-setup.sh"
   - "export DISPLAY=:99.0"
-  - "Xvfb :99.0 -extension RANDR > /dev/null &"
-  - "WEBDRIVER_SYNC_ENABLE_SELENIUM_STDOUT=true"
-  - "WEBDRIVER_SYNC_ENABLE_SELENIUM_STDERR=true"
+  - "Xvfb :99.0 -extension RANDR"
 script:
   - npm test
 after_success:
